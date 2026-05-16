@@ -1,0 +1,37 @@
+###############################################
+# CamWatcher — MediaMTX v1.9.1 configuration
+###############################################
+
+logLevel: info
+logDestinations: [stdout]
+
+# RTSP (cameras + Python worker reads republished streams)
+rtsp: yes
+rtspAddress: :8554
+
+# HLS (browser playback)
+# Using fmp4 (standard HLS, not LL-HLS) — LL-HLS requires 7 pre-buffered
+# segments before serving anything, which causes 404s during the initial buffer
+# period. fmp4 starts serving after the first segment (~2s).
+hls: yes
+hlsAddress: :8888
+hlsVariant: fmp4
+hlsSegmentCount: 7
+hlsSegmentDuration: 2s
+hlsSegmentMaxSize: 50MB
+hlsAllowOrigin: "*"
+
+# WebRTC disabled
+webrtc: no
+
+# SRT disabled
+srt: no
+
+# Control API — used by Python backend to add/remove paths dynamically
+api: yes
+apiAddress: :9997
+
+# Paths are added dynamically via the API; define a regex default
+paths:
+  "~^cam_[0-9]+$":
+    sourceOnDemand: no
