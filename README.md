@@ -18,6 +18,29 @@ Turn a TP‑Link Tapo (or any RTSP camera) into a private, searchable, event‑a
 
 ---
 
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center"><b>Dashboard — live feed + AI event summary</b></td>
+    <td align="center"><b>Cameras — manage connected cameras</b></td>
+  </tr>
+  <tr>
+    <td><img src="docs/images/screen-dashboard.png" alt="Dashboard" /></td>
+    <td><img src="docs/images/screen-cameras.png" alt="Cameras" /></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Events — 100 motion events with AI descriptions</b></td>
+    <td align="center"><b>Settings — motion threshold, frame skip, storage</b></td>
+  </tr>
+  <tr>
+    <td><img src="docs/images/screen-events.png" alt="Events" /></td>
+    <td><img src="docs/images/screen-settings.png" alt="Settings" /></td>
+  </tr>
+</table>
+
+---
+
 ## Why CamWatcher
 
 Most consumer cameras (Tapo, Reolink, generic ONVIF) ship a "good enough" mobile app and a closed cloud. CamWatcher leaves the hardware untouched and gives you the missing layer:
